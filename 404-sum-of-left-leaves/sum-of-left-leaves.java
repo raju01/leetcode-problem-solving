@@ -16,19 +16,20 @@
 class Solution {
     int sum=0;
     public int sumOfLeftLeaves(TreeNode root) {
-         inOrder(root);
+        if(root==null)
+         return 0;   
+         sumOfLeftLeaves(root,false);
          return sum;
 
     }
 
-void inOrder(TreeNode root){
-   if(root==null)
-    return;
-    inOrder(root.left);
-    if(root.left!=null && root.left.left==null && root.left.right==null){
-     sum+=root.left.val;
+void sumOfLeftLeaves(TreeNode root, boolean isLeft){
+    
+    if(isLeft && root.left==null && root.right==null){
+     sum+=root.val;
     }
-    inOrder(root.right);
+    if(root.left!=null) sumOfLeftLeaves(root.left,true);
+    if(root.right!=null) sumOfLeftLeaves(root.right,false);
 }
 
 }
