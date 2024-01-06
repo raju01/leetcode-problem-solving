@@ -39,7 +39,7 @@ class Solution {
         }
 
         // Mark the current node as visited and explored
-        visited[course] = 2;
+         visited[course] = 2;
         return true;
     }
 }
