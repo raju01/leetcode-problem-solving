@@ -5,13 +5,13 @@ class Solution {
         int right[] = new int[n];
         int result = 0;
 
-        //Fill the max hight from left to right
+        //Fill the max height from left to right
         left[0] = height[0];
         for(int i=1;i<n;i++){
             left[i] = Math.max(left[i-1], height[i]);
         }
 
-        //Fill the max hight from right to left
+        //Fill the max height from right to left
         right[n-1] = height[n-1];
         for(int i=n-2;i>=0;i--){
             right[i] = Math.max(right[i+1], height[i]);
