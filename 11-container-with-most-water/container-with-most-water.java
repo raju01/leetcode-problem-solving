@@ -1,7 +1,7 @@
 class Solution {
     public int maxArea(int[] height) {
         int len = height.length;
-        // take 2 pointer to use sliding window approach
+        // using 2 pointer approach
         int i=0, j=len-1,maxArea=0;
 
         while(i<j){
