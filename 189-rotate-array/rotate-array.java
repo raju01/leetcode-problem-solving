@@ -10,7 +10,7 @@ class Solution {
     reverse(nums,k,nums.length-1);
     }
  public static int [] reverse(int [] nums, int start, int end){
-    while(start<=end){
+    while(start<end){
         int temp = nums[start]; 
         nums[start]=nums[end]; 
         nums[end]=temp;
