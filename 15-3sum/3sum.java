@@ -7,7 +7,7 @@ class Solution {
         Arrays.sort(nums);
         Set<List<Integer>> result = new HashSet<>();
         for(int i=0;i<len-2;i++){
-
+            if(i>0 && nums[i-1]==nums[i]) continue;
             int left = i+1;
             int right=len-1;
             while(left<right){
