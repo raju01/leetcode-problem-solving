@@ -4,10 +4,10 @@ class Solution {
         if(nums==null || len<3) 
           return new ArrayList<>();
         //Sort it here first
-        
+        Arrays.sort(nums);
         Set<List<Integer>> result = new HashSet<>();
         for(int i=0;i<len-2;i++){
-            Arrays.sort(nums);
+
             int left = i+1;
             int right=len-1;
             while(left<right){
