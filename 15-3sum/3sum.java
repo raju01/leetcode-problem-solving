@@ -17,6 +17,8 @@ class Solution {
                 result.add(Arrays.asList(nums[i],nums[left],nums[right]));
                 left++;
                 right--;
+                //Skipping if for same left pointer we have already got the answer
+                // then if next is same then need to skip here
                 while(left<right && nums[left]==nums[left-1]) left++;
             }else if(sum<0){
                 left++;
