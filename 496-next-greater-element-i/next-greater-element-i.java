@@ -30,7 +30,6 @@ class Solution {
                 st.push(element);
             }
         }
-        System.out.println(map);
         for (int i = 0; i < nums1.length; i++)
             nums1[i] = map.get(nums1[i]);
         return nums1;
