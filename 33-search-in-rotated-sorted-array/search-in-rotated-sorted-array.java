@@ -8,13 +8,13 @@ class Solution {
               return mid;
           //First part is sorted    
         if(nums[low]<=nums[mid]){
-         if(nums[low]<=target && target<=nums[mid]){
+         if(nums[low]<=target && target<nums[mid]){
             high=mid-1;
          }else{
             low=mid+1;
          }
         }else{  
-            if(target>=nums[mid] && target<=nums[high]){
+            if(target>nums[mid] && target<=nums[high]){
                 low=mid+1;
             }else{
                 high=mid-1;
